@@ -1,101 +1,60 @@
 body {
+    background: linear-gradient(135deg, #00f, #ff00ff);
+    color: #fff;
     font-family: 'Arial', sans-serif;
-    background: #1a1a1a;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: #fff;
 }
 
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.login-card {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 350px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    width: 300px;
     text-align: center;
-    position: relative;
 }
 
-.login-card:before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-    opacity: 0.2;
-    z-index: -1;
-}
-
-h2 {
-    margin: 0 0 20px;
-    font-size: 2rem;
-    color: #00d2ff;
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 0 0 5px #00f, 0 0 10px #ff00ff;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #00f;
+    border-radius: 5px;
+    background: #222;
     color: #fff;
-    font-size: 1rem;
-    outline: none;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.input-group input:focus {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+    font-size: 1em;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: #00d2ff;
-    color: #000;
+    background: #00f;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1em;
     cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #0091ea;
-    transform: translateY(-2px);
-}
-
-.footer-links {
-    margin-top: 15px;
-}
-
-.footer-links a {
-    color: #00d2ff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.875rem;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #0091ea;
+    background: #00c;
 }
