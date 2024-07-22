@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login</title>
+    <title>Cyberpunk Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="login-container">
-        <div class="login-card">
-            <h2>Login</h2>
-            <form id="login-form">
-                <div class="input-group">
-                    <input type="text" id="username" name="username" placeholder="Username" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Login</button>
-                <div class="footer-links">
-                    <a href="#">Lupa Password?</a>
-                    <a href="#">Daftar</a>
-                </div>
-            </form>
-        </div>
+        <h1>Login</h1>
+        <form>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
