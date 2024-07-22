@@ -1,89 +1,101 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    color: #fff;
-    overflow: hidden; /* Untuk menyembunyikan scrollbar */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    background: linear-gradient(45deg, #020024, #090979, #00d4ff);
-    background-size: 300% 300%;
-    animation: bgAnimation 15s ease infinite;
-    z-index: -1;
-}
-
-@keyframes bgAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.container {
-    position: fixed;
-    width: 100%;
-    max-width: 400px;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    z-index: 1; /* Agar form berada di atas background */
-    margin: 0 20px; /* Menyesuaikan margin untuk layar kecil */
 }
 
 .login-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+}
+
+h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
     position: relative;
-    padding: 40px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.footer-links {
+    margin-top: 15px;
     text-align: center;
 }
 
-.login-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-transform: uppercase;
+.footer-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.875rem;
 }
 
-.user-box {
-    position: relative;
-    margin-bottom: 30px;
+.footer-links a:hover {
+    text-decoration: underline;
 }
-
-.user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-}
-
-.user-box label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    pointer-events: none;
-    transition: 0.5s;
-}
-
-.user-box input:focus ~ label,
-.user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #03e9f4;
-    font-size: 12px;
-}
-
-.button-form a {
-    position: relative
