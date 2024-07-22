@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="login-button">Login</button>
-            <div class="error-message" id="errorMessage"></div>
-        </form>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="user-box">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="button-form">
+                    <a href="#" id="loginButton">Login</a>
+                </div>
+                <p id="errorMsg"></p>
+            </form>
+        </div>
     </div>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
