@@ -1,42 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const usernameInput = document.querySelector('input[name="username"]');
-    const passwordInput = document.querySelector('input[name="password"]');
-    const container = document.getElementById('container');
-    const usernameBox = document.getElementById('usernameBox');
-    const passwordBox = document.getElementById('passwordBox');
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
 
-    usernameInput.addEventListener('focus', function() {
-        usernameBox.classList.add('user-box-focused');
-        container.classList.add('blur-background');
-    });
+    // Hide all error messages initially
+    document.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
 
-    passwordInput.addEventListener('focus', function() {
-        passwordBox.classList.add('user-box-focused');
-        container.classList.add('blur-background');
-    });
+    // Validate inputs
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    let valid = true;
 
-    usernameInput.addEventListener('blur', function() {
-        usernameBox.classList.remove('user-box-focused');
-        container.classList.remove('blur-background');
-    });
+    if (username === '') {
+        document.getElementById('username-error').style.display = 'block';
+        valid = false;
+    }
 
-    passwordInput.addEventListener('blur', function() {
-        passwordBox.classList.remove('user-box-focused');
-        container.classList.remove('blur-background');
-    });
+    if (password === '') {
+        document.getElementById('password-error').style.display = 'block';
+        valid = false;
+    }
 
-    document.getElementById('loginButton').addEventListener('click', function(event) {
-        event.preventDefault();
-
-        const username = usernameInput.value;
-        const password = passwordInput.value;
-        const errorMsg = document.getElementById('errorMsg');
-
-        if (username === '' || password === '') {
-            errorMsg.textContent = 'Please fill in all fields.';
-        } else {
-            errorMsg.textContent = '';
-            alert('Login successful!');
-        }
-    });
+    if (valid) {
+        // Perform login action, e.g., send data to server
+        alert('Login berhasil!'); // Placeholder action
+    }
 });
