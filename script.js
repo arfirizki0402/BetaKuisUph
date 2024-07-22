@@ -1,15 +1,27 @@
-document.getElementById('loginButton').addEventListener('click', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const usernameInput = document.querySelector('input[name="username"]');
+    const passwordInput = document.querySelector('input[name="password"]');
+    const container = document.getElementById('container');
+    const usernameBox = document.getElementById('usernameBox');
+    const passwordBox = document.getElementById('passwordBox');
 
-    const username = document.querySelector('input[name="username"]').value;
-    const password = document.querySelector('input[name="password"]').value;
-    const errorMsg = document.getElementById('errorMsg');
+    usernameInput.addEventListener('focus', function() {
+        usernameBox.classList.add('user-box-focused');
+        container.classList.add('blur-background');
+    });
 
-    if (username === '' || password === '') {
-        errorMsg.textContent = 'Please fill in all fields.';
-    } else {
-        errorMsg.textContent = '';
-        alert('Login successful!');
-        // Here you can add further login logic, like sending data to the server
-    }
+    passwordInput.addEventListener('focus', function() {
+        passwordBox.classList.add('user-box-focused');
+        container.classList.add('blur-background');
+    });
+
+    usernameInput.addEventListener('blur', function() {
+        usernameBox.classList.remove('user-box-focused');
+        container.classList.remove('blur-background');
+    });
+
+    passwordInput.addEventListener('blur', function() {
+        passwordBox.classList.remove('user-box-focused');
+        container.classList.remove('blur-background');
+    });
 });
