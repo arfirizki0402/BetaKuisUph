@@ -13,21 +13,14 @@ body {
     align-items: center;
 }
 
-.login-container {
+.login-form {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
-    width: 90%;
-    height: 90%;
-    max-width: 500px;
-    max-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    box-sizing: border-box;
+    max-width: 400px;
+    width: 100%;
 }
 
 h1 {
@@ -38,7 +31,6 @@ h1 {
 
 .input-group {
     margin-bottom: 15px;
-    width: 100%;
     text-align: left;
 }
 
@@ -48,7 +40,7 @@ label {
 }
 
 input {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 15px;
     border: 1px solid #00f;
     border-radius: 5px;
