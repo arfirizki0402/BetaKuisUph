@@ -104,26 +104,24 @@ input:focus {
 }
 
 button {
-    background: linear-gradient(135deg, #00f, #ff00ff);
+    background: transparent;
     border: none;
-    border-radius: 10px;
-    color: #fff;
-    padding: 15px;
+    color: #0ff;
     font-size: 1.2em;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
     z-index: 1;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    text-decoration: underline;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #00ccff, #ff66ff);
+    color: #ff00ff;
     transform: scale(1.05);
 }
 
 button:active {
-    background: linear-gradient(135deg, #0099cc, #cc00cc);
+    color: #cc00cc;
     transform: scale(0.95);
 }
 
