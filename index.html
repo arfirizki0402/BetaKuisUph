@@ -4,7 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyberpunk Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #00f, #ff00ff);
+            opacity: 0.5;
+            z-index: -1;
+            filter: blur(8px);
+        }
+
+        .login-form {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 60px rgba(0, 255, 255, 0.8);
+            width: 90%;
+            max-width: 420px;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            transform: rotateX(5deg);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 60px rgba(0, 255, 255, 0.8);
+            }
+            50% {
+                box-shadow: 0 0 80px rgba(0, 255, 255, 1);
+            }
+            100% {
+                box-shadow: 0 0 60px rgba(0, 255, 255, 0.8);
+            }
+        }
+
+        .login-form h1 {
+            margin-bottom: 20px;
+            font-size: 3em;
+            color: #0ff;
+            text-shadow: 0 0 15px #0ff, 0 0 30px #ff00ff;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+            color: #0ff;
+            transition: color 0.3s;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 15px;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            background: #222;
+            color: #fff;
+            font-size: 1em;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #ff00ff;
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+
+        button {
+            background: linear-gradient(135deg, #0ff, #f0f);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #0cc, #d0d);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background: linear-gradient(135deg, #09c, #b0b);
+            transform: scale(0.95);
+        }
+    </style>
 </head>
 <body>
     <div class="login-form">
