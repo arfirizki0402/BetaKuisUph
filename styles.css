@@ -192,3 +192,23 @@ body {
     margin-top: 20px;
     font-size: 14px;
 }
+/* Tambahkan ini di bagian bawah styles.css */
+.user-box-focused {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Agar di atas semua elemen lainnya */
+    width: 80%;
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #03e9f4;
+    transition: all 0.3s ease-in-out;
+}
+
+.blur-background {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out;
+}
