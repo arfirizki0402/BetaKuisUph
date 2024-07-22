@@ -24,4 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
         passwordBox.classList.remove('user-box-focused');
         container.classList.remove('blur-background');
     });
+
+    document.getElementById('loginButton').addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+        const errorMsg = document.getElementById('errorMsg');
+
+        if (username === '' || password === '') {
+            errorMsg.textContent = 'Please fill in all fields.';
+        } else {
+            errorMsg.textContent = '';
+            alert('Login successful!');
+        }
+    });
 });
