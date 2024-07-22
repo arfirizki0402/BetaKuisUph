@@ -52,6 +52,8 @@
             overflow: hidden;
             transform: rotateX(5deg);
             animation: pulse 2s infinite ease-in-out;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
         }
 
         @keyframes pulse {
@@ -139,24 +141,45 @@
             align-items: center;
             height: 100vh;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="centered-container">
         <div class="login-form">
-            <h1>Asup</h1>
-            <form>
-                <div class="input-group">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div id="usernameGroup" class="input-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" name="username" required>
+                    <button type="button" onclick="validateUsername()">Next</button>
                 </div>
-                <div class="input-group">
+                <div id="passwordGroup" class="input-group hidden">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
                 </div>
-                <button type="submit">Login</button>
             </form>
         </div>
     </div>
+
+    <script>
+        function validateUsername() {
+            const usernameInput = document.getElementById('username').value;
+            const usernameGroup = document.getElementById('usernameGroup');
+            const passwordGroup = document.getElementById('passwordGroup');
+            
+            // Simple validation for demonstration (replace with actual logic)
+            if (usernameInput.trim() !== "") {
+                usernameGroup.classList.add('hidden');
+                passwordGroup.classList.remove('hidden');
+            } else {
+                alert('Please enter a valid username.');
+            }
+        }
+    </script>
 </body>
 </html>
