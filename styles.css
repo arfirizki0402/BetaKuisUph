@@ -1,13 +1,27 @@
 body {
     margin: 0;
     padding: 0;
-    background: #222;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     font-family: Arial, sans-serif;
     color: #fff;
+    overflow: hidden; /* Untuk menyembunyikan scrollbar */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #020024, #090979, #00d4ff);
+    background-size: 300% 300%;
+    animation: bgAnimation 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -18,6 +32,7 @@ body {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Agar form berada di atas background */
 }
 
 .login-box {
