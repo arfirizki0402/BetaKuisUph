@@ -22,18 +22,31 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(circle at center, #00f, #ff00ff);
-            opacity: 0.5;
+            opacity: 0.7;
             z-index: -1;
-            filter: blur(8px);
+            filter: blur(12px);
+            animation: animateBg 20s infinite linear;
+        }
+
+        @keyframes animateBg {
+            0% {
+                background: radial-gradient(circle at center, #00f, #ff00ff);
+            }
+            50% {
+                background: radial-gradient(circle at center, #ff00ff, #00f);
+            }
+            100% {
+                background: radial-gradient(circle at center, #00f, #ff00ff);
+            }
         }
 
         .login-form {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 0 60px rgba(0, 255, 255, 0.8);
             width: 90%;
-            max-width: 420px;
+            max-width: 400px;
             position: relative;
             text-align: center;
             overflow: hidden;
@@ -57,7 +70,7 @@
             margin-bottom: 20px;
             font-size: 3em;
             color: #0ff;
-            text-shadow: 0 0 15px #0ff, 0 0 30px #ff00ff;
+            text-shadow: 0 0 20px #0ff, 0 0 30px #ff00ff;
         }
 
         .input-group {
@@ -117,22 +130,32 @@
             background: linear-gradient(135deg, #09c, #b0b);
             transform: scale(0.95);
         }
+
+        /* Centering the login form */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
-    <div class="login-form">
-        <h1>Login</h1>
-        <form>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+    <div class="centered-container">
+        <div class="login-form">
+            <h1>Login</h1>
+            <form>
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
